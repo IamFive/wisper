@@ -2,7 +2,7 @@
 
 // global configuration
 var require = {
-	baseUrl: ctx + '/static/js',
+	baseUrl: ctx + '/asserts/js',
 	urlArgs : 'v=' + v,
 	waitSeconds: 30,
 	paths : {

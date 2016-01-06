@@ -11,8 +11,6 @@
 	<shiro:authenticated>
 		<a href="${ctx}/logout">logout</a>
 	</shiro:authenticated>
-	
 	<%@ include file="/common/message.jspf" %>
-	
 </body>
 </html>
