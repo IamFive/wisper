@@ -29,8 +29,11 @@
 <script type="text/javascript" src="${ctx}/asserts/js/libs/underscore/underscore-1.6.min.js"></script>
 <!-- require js -->
 <script type="text/javascript" src="${ctx}/asserts/js/rc.js"></script>
-<script type="text/javascript" src="${ctx}/asserts/js/libs/require/require.js"
-	data-main='<sitemesh:write property="body.data-main" />' ></script>
+	<script data-main='<sitemesh:write property="body.data-main" />'  type="text/javascript" 
+	src="${ctx}/asserts/js/libs/require/require.js"></script>
+	<div data-main='<sitemesh:write property="body.data-main" />' ></div>
+<script>
+</script>
 </head>
 <body>
 	<sitemesh:write property='body' />
