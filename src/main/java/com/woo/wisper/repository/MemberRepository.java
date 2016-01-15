@@ -20,5 +20,6 @@ import edu.hunter.modules.persistence.mybatis.MyBatis;
 public interface MemberRepository {
 
 	public void save(Member m);
+	
 
 }

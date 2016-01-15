@@ -5,7 +5,7 @@
 <html class="no-js">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>sso - <sitemesh:write property="title" /></title>
+<title>sso - </title>
 <meta name="Keywords" content="">
 <meta name="Description" content="">
 <script>
@@ -15,7 +15,6 @@
 	var v= "${v}";
 	var UEDITOR_HOME_URL = ctx + '/asserts/js/libs/ueditor/';
 </script>
-<sitemesh:write property='head' />
 <!-- css here -->
 <link href="${ctx}/asserts/styles/css/basic.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="${ctx}/asserts/styles/css/front.css" />
@@ -29,13 +28,12 @@
 <script type="text/javascript" src="${ctx}/asserts/js/libs/underscore/underscore-1.6.min.js"></script>
 <!-- require js -->
 <script type="text/javascript" src="${ctx}/asserts/js/rc.js"></script>
-	<script data-main='<sitemesh:write property="body.data-main" />'  type="text/javascript" 
+<Script data-main='<sitemesh:write property="body.data-main" />'  type="text/javascript" 
 	src="${ctx}/asserts/js/libs/require/require.js"></script>
-	<div data-main='<sitemesh:write property="body.data-main" />' ></div>
-<script>
-</script>
 </head>
 <body>
+<em data-main='<sitemesh:write property="body.data-main" />'  type="text/javascript" 
+	src="${ctx}/asserts/js/libs/require/require.js"></em>
 	<sitemesh:write property='body' />
 	<script type="text/javascript">
 		require(['domReady!', 'common/css-fix', 'common/directives'], 

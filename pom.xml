@@ -169,6 +169,12 @@
 			<artifactId>mapper</artifactId>
 			<version>${mapper.version}</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>edu.woo</groupId>
+			<artifactId>query-builder</artifactId>
+			<version>1.0</version>
+		</dependency>
 
 		<!-- connection pool -->
 		<dependency>

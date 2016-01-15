@@ -31,41 +31,6 @@
 	<!-- 使用annotation定义事务 -->
 	<tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true" />
 	
-	
-	<!-- MyBatis配置 -->
-	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-		<property name="dataSource" ref="dataSource" />
-		<!-- 自动扫描entity目录, 省掉Configuration.xml里的手工配置 -->
-		<property name="typeAliasesPackage" value="com.woo.wisper.domain" />
-		<!-- 显式指定Mapper文件位置 -->
-		<property name="mapperLocations" value="classpath:/mybatis/*Mapper.xml" />
-		<property name="typeHandlersPackage" value="edu.hunter.modules.persistence.mybatis.typehandler" />
-		<property name="plugins">
-			<array>
-				<bean class="com.github.pagehelper.PageHelper">
-					<property name="properties">
-						<value>
-							dialect=postgresql
-						</value>
-					</property>
-				</bean>
-			</array>
-		</property>
-	</bean>
-
-	<!-- 扫描basePackage下所有以@MyBatisRepository标识的 接口 -->
-	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.woo.wisper.repository" />
-		<property name="annotationClass" value="edu.hunter.modules.persistence.mybatis.MyBatis" />
-		<!-- 
-		<property name="properties">
-			<value>
-				ORDER=before
-				seqFormat=nextval(''{3}_{2}_seq'')
-			</value>
-		</property>
-		 -->
-	</bean>
 
 	<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource"
 		destroy-method="shutdown">

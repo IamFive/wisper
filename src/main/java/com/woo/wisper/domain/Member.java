@@ -1,84 +1,128 @@
 package com.woo.wisper.domain;
 
-import java.io.Serializable;
+import java.util.Date;
 import java.util.Map;
 
-import javax.persistence.Entity;
+import javax.persistence.Column;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-@Entity
 @Table(name = "public.member")
-public class Member extends Domain implements Serializable {
+public class Member {
+    @SequenceGenerator(name="",sequenceName="fake_id_seq")
+    private Integer id;
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 7585351518141988002L;
+    private String name;
 
-	private String name;
+    @Column(name = "regist_ip")
+    private String registIp;
 
-	private String registIp;
+    @Column(name = "created_on")
+    private Date createdOn;
 
-	private Boolean isAdmin;
-	
-	private Map<String, Object> profile;
+    @Column(name = "updated_on")
+    private Date updatedOn;
 
-	/**
-	 * @return the name
-	 */
-	public String getName() {
-		return name;
-	}
+    @Column(name = "is_admin")
+    private Boolean isAdmin;
 
-	/**
-	 * @param name the name to set
-	 */
-	public void setName(String name) {
-		this.name = name;
-	}
+    private Map profile;
 
-	/**
-	 * @return the registIp
-	 */
-	public String getRegistIp() {
-		return registIp;
-	}
+    /**
+     * @return id
+     */
+    public Integer getId() {
+        return id;
+    }
 
-	/**
-	 * @param registIp the registIp to set
-	 */
-	public void setRegistIp(String registIp) {
-		this.registIp = registIp;
-	}
+    /**
+     * @param id
+     */
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-	/**
-	 * @return the isAdmin
-	 */
-	public Boolean getIsAdmin() {
-		return isAdmin;
-	}
+    /**
+     * @return name
+     */
+    public String getName() {
+        return name;
+    }
 
-	/**
-	 * @param isAdmin the isAdmin to set
-	 */
-	public void setIsAdmin(Boolean isAdmin) {
-		this.isAdmin = isAdmin;
-	}
+    /**
+     * @param name
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	/**
-	 * @return the profile
-	 */
-	public Map<String, Object> getProfile() {
-		return profile;
-	}
+    /**
+     * @return regist_ip
+     */
+    public String getRegistIp() {
+        return registIp;
+    }
 
-	/**
-	 * @param profile the profile to set
-	 */
-	public void setProfile(Map<String, Object> profile) {
-		this.profile = profile;
-	}
+    /**
+     * @param registIp
+     */
+    public void setRegistIp(String registIp) {
+        this.registIp = registIp;
+    }
 
-	
-	
+    /**
+     * @return created_on
+     */
+    public Date getCreatedOn() {
+        return createdOn;
+    }
+
+    /**
+     * @param createdOn
+     */
+    public void setCreatedOn(Date createdOn) {
+        this.createdOn = createdOn;
+    }
+
+    /**
+     * @return updated_on
+     */
+    public Date getUpdatedOn() {
+        return updatedOn;
+    }
+
+    /**
+     * @param updatedOn
+     */
+    public void setUpdatedOn(Date updatedOn) {
+        this.updatedOn = updatedOn;
+    }
+
+    /**
+     * @return is_admin
+     */
+    public Boolean getIsAdmin() {
+        return isAdmin;
+    }
+
+    /**
+     * @param isAdmin
+     */
+    public void setIsAdmin(Boolean isAdmin) {
+        this.isAdmin = isAdmin;
+    }
+
+    /**
+     * @return profile
+     */
+    public Map getProfile() {
+        return profile;
+    }
+
+    /**
+     * @param profile
+     */
+    public void setProfile(Map profile) {
+        this.profile = profile;
+    }
 }
